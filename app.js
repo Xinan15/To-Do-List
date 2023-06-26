@@ -11,6 +11,9 @@ const app = express();
 
 var items = [];
 
+// To set up bodyparser
+app.use(bodyParser.urlencoded({extended:true}));
+
 // To set app view engine into ejs
 // This line has to be put below the: const app = express(); (After the app is created.)
 app.set('view engine', 'ejs');

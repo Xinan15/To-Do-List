@@ -9,7 +9,7 @@
 
 <body>
     <h1>
-        <%= kindOfDate%>
+        <%= kindOfDate %>
     </h1>
 
     <!-- form to post the information inside the form to the server at the "home route"  -->
@@ -19,12 +19,14 @@
         <!-- scriptlet tags -->
         <!-- i is incremented -->
         <% for (var i=0; i<newListItems.length; i++){ %>
-            <li>
-                <%= newListItems[i] %>
-            </li>
+            <li><%= newListItems[i] %></li>
             <% } %>
     </ul>
     <form class="" action="/" method="post">
+
+        <input type="text" name="newItem">
+
+        <button type="submit" name="button">Add</button>
 
     </form>
 
