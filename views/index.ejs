@@ -9,27 +9,33 @@
 </head>
 
 <body>
-    <h1>
-        <%= kindOfDate %>
-    </h1>
+    <div class="box" id="heading">
+        <h1>
+            <%= kindOfDate %>
+        </h1>
+    </div>
 
     <!-- form to post the information inside the form to the server at the "home route"  -->
-
-    <ul>
+    <div class="box">
 
         <!-- scriptlet tags -->
         <!-- i is incremented -->
         <% for (var i=0; i<newListItems.length; i++){ %>
-            <li><%= newListItems[i] %></li>
+            <div class="item">
+                <input type="checkbox">
+                <p>
+                    <%= newListItems[i] %>
+                </p>
+            </div>
             <% } %>
-    </ul>
-    <form class="" action="/" method="post">
 
-        <input type="text" name="newItem">
+                <form class="item" action="/" method="post">
 
-        <button type="submit" name="button">Add</button>
+                    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
 
-    </form>
+                    <button type="submit" name="button">+</button>
+
+                </form>
 
 </body>
 
