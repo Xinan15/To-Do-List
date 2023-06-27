@@ -1,3 +1,0 @@
-express
-body-parser
-ejs
